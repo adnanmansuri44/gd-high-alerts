@@ -53,7 +53,7 @@ Resources:
         - Endpoint: !Ref emailgdalerts
           Protocol: "email"
       TopicName: "event-rule-action"
-      DisplayName: high-gd-alerts
+      DisplayName: !Sub 'high-gd-alerts-${AWS::Region}'
   SnsTopicPolicyEventRule:
     Type: "AWS::SNS::TopicPolicy"
     Properties:
